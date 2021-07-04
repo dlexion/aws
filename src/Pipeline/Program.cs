@@ -13,7 +13,7 @@ namespace Pipeline
             var lambdaStack = new LambdaStack(app, "LambdaStack");
             new PipelineStack(app, "PipelineDeployingLambdaStack", new PipelineStackProps
             {
-                LambdaCode = lambdaStack.lambdaCode,
+                LambdaCode = lambdaStack.LambdaCode,
                 RepoName = CodecommitRepoName
             });
 
