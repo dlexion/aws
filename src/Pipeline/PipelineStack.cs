@@ -63,7 +63,8 @@ namespace Pipeline
                         {
                             ["commands"] = new string[]
                             {
-                                "cd Lambda",
+                                "ls",
+                                "cd src/Lambda",
                                 "dotnet restore",
                             }
                         },
