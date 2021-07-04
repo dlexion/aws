@@ -103,7 +103,7 @@ namespace Pipeline
                             new CodeCommitSourceAction(new CodeCommitSourceActionProps
                             {
                                 ActionName = "Source",
-                                Branch = "main",
+                                Branch = "master",
                                 Repository = code,
                                 Output = sourceOutput
                             })
