@@ -67,7 +67,7 @@ namespace Pipeline
                             //},
                             ["commands"] = new string[]
                             {
-                                "sudo apt-get install -y dotnet-sdk-3.1",
+                                "apt-get install -y dotnet-sdk-3.1",
                                 "cd src/Lambda",
                                 "dotnet restore",
                             }
