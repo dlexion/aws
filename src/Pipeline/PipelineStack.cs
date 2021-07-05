@@ -93,10 +93,10 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
-                            ["runtime-versions"] = new Dictionary<string, object>()
-                            {
-                                {"dotnet", 3.1}
-                            },
+                            //["runtime-versions"] = new Dictionary<string, object>()
+                            //{
+                            //    {"dotnet", 3.1}
+                            //},
                             ["commands"] = new string[]
                             {
                                 $"echo \"{buildSpec}\"",
@@ -120,7 +120,7 @@ namespace Pipeline
                 }),
                 Environment = new BuildEnvironment
                 {
-                    BuildImage = LinuxBuildImage.STANDARD_2_0
+                    BuildImage = LinuxBuildImage.STANDARD_3_0
                 }
             });
 
