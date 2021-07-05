@@ -61,9 +61,13 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
+                            //["runtime-versions"] = new Dictionary<string, string>()
+                            //{
+                            //    {"dotnet", "3.1"}
+                            //},
                             ["commands"] = new string[]
                             {
-                                "ls",
+                                "sudo apt-get install -y dotnet-sdk-3.1",
                                 "cd src/Lambda",
                                 "dotnet restore",
                             }
@@ -75,7 +79,7 @@ namespace Pipeline
                     },
                     ["artifacts"] = new Dictionary<string, object>
                     {
-                        ["base-directory"] = "lambda",
+                        ["base-directory"] = "Lambda",
                         ["files"] = new string[]
                         {
                             "bin/Release/netcoreapp3.1/*",
@@ -120,7 +124,7 @@ namespace Pipeline
                                 ActionName = "Lambda_Build",
                                 Project = lambdaBuild,
                                 Input = sourceOutput,
-                                Outputs = new [] { lambdaBuildOutput }
+                                Outputs = new [] { lambdaBuildOutput },
                             }),
                             new CodeBuildAction(new CodeBuildActionProps
                             {
