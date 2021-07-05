@@ -52,6 +52,38 @@ namespace Pipeline
                 }
             });
 
+            var buildSpec = BuildSpec.FromObject(new Dictionary<string, object>
+            {
+                ["version"] = "0.2",
+                ["phases"] = new Dictionary<string, object>
+                {
+                    ["install"] = new Dictionary<string, object>
+                    {
+                        ["runtime-versions"] = new Dictionary<string, object>()
+                        {
+                            {"dotnet", 3.1}
+                        },
+                        ["commands"] = new string[]
+                        {
+                            "cd src/Lambda",
+                            "dotnet restore",
+                        }
+                    },
+                    ["build"] = new Dictionary<string, string>
+                    {
+                        ["commands"] = "dotnet build -c Release"
+                    }
+                },
+                ["artifacts"] = new Dictionary<string, object>
+                {
+                    ["base-directory"] = "Lambda",
+                    ["files"] = new string[]
+                    {
+                        "bin/Release/netcoreapp3.1/*",
+                    }
+                }
+            }).ToBuildSpec();
+
             var lambdaBuild = new PipelineProject(this, "LambdaBuild", new PipelineProjectProps
             {
                 BuildSpec = BuildSpec.FromObject(new Dictionary<string, object>
@@ -61,13 +93,13 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
-                            //["runtime-versions"] = new Dictionary<string, string>()
-                            //{
-                            //    {"dotnet", "3.1"}
-                            //},
+                            ["runtime-versions"] = new Dictionary<string, object>()
+                            {
+                                {"dotnet", 3.1}
+                            },
                             ["commands"] = new string[]
                             {
-                                "apt-get install -y dotnet-sdk-3.1",
+                                $"echo \"{buildSpec}\"",
                                 "cd src/Lambda",
                                 "dotnet restore",
                             }
