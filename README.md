@@ -14,4 +14,8 @@ It uses the [.NET Core CLI](https://docs.microsoft.com/dotnet/articles/core/) to
 * `cdk synth`        emits the synthesized CloudFormation template
 
 cdk bootstrap --profile personal
+
 cdk deploy PipelineDeployingLambdaStack --profile personal
+
+cdk destroy LambdaStack --profile personal
+cdk destroy PipelineDeployingLambdaStack --profile personal
