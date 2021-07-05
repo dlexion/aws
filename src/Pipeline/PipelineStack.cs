@@ -52,7 +52,7 @@ namespace Pipeline
                 }
             });
 
-            var buildSpec = BuildSpec.FromObject(new Dictionary<string, object>
+            var buildSpec = BuildSpec.FromObjectToYaml(new Dictionary<string, object>
             {
                 ["version"] = "0.2",
                 ["phases"] = new Dictionary<string, object>
@@ -93,10 +93,10 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
-                            //["runtime-versions"] = new Dictionary<string, object>()
-                            //{
-                            //    {"dotnet", 3.1}
-                            //},
+                            ["runtime-versions"] = new Dictionary<string, object>()
+                            {
+                                {"dotnet", 3.1}
+                            },
                             ["commands"] = new string[]
                             {
                                 $"echo \"{buildSpec}\"",
