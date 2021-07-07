@@ -38,6 +38,8 @@ namespace SimpleLambda
                 Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
             };
 
+            context.Logger.Log(response.Body);
+
             return response;
         }
     }
