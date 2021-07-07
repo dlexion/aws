@@ -93,6 +93,7 @@ namespace Pipeline
 
             new Amazon.CDK.AWS.CodePipeline.Pipeline(this, "Pipeline", new PipelineProps
             {
+                CrossAccountKeys = false,
                 Stages = new[]
                 {
                     new Amazon.CDK.AWS.CodePipeline.StageProps

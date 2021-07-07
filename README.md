@@ -13,9 +13,11 @@ It uses the [.NET Core CLI](https://docs.microsoft.com/dotnet/articles/core/) to
 * `cdk diff`         compare deployed stack with current state
 * `cdk synth`        emits the synthesized CloudFormation template
 
-cdk bootstrap --profile personal
+## Steps to deploy
 
-cdk deploy PipelineDeployingLambdaStack --profile personal
+1. cdk bootstrap --profile personal
+2. cdk deploy PipelineDeployingLambdaStack --profile personal
 
-cdk destroy LambdaStack --profile personal
-cdk destroy PipelineDeployingLambdaStack --profile personal
+## Steps to delete
+1. cdk destroy LambdaStack --profile personal
+2. cdk destroy PipelineDeployingLambdaStack --profile personal
