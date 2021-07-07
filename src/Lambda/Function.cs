@@ -34,7 +34,7 @@ namespace SimpleLambda
             var response = new APIGatewayProxyResponse
             {
                 StatusCode = (int)HttpStatusCode.OK,
-                Body = "Success!!!",
+                Body = "Success",
                 Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
             };
 
