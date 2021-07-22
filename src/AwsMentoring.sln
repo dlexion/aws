@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipeline", "Pipeline\Pipeli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleLambda", "Lambda\SimpleLambda.csproj", "{C57FC679-466F-42F1-8AA8-904195CAF967}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizerHandler", "AuthorizerHandler\AuthorizerHandler.csproj", "{FBF2741E-E906-42CD-9345-49200559B13D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{C57FC679-466F-42F1-8AA8-904195CAF967}.Release|x64.Build.0 = Release|Any CPU
 		{C57FC679-466F-42F1-8AA8-904195CAF967}.Release|x86.ActiveCfg = Release|Any CPU
 		{C57FC679-466F-42F1-8AA8-904195CAF967}.Release|x86.Build.0 = Release|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Debug|x64.Build.0 = Debug|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Debug|x86.Build.0 = Debug|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Release|x64.ActiveCfg = Release|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Release|x64.Build.0 = Release|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Release|x86.ActiveCfg = Release|Any CPU
+		{FBF2741E-E906-42CD-9345-49200559B13D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
