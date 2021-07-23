@@ -35,10 +35,13 @@ namespace AuthorizerHandler
                 Statement = new List<APIGatewayCustomAuthorizerPolicy.IAMPolicyStatement>()
             };
 
+            var effect = allowedUserAgent.Equals(userAgent) ? "Allow" : "Deny";
+            context.Logger.LogLine($"effect: {effect}");
+
             policy.Statement.Add(new APIGatewayCustomAuthorizerPolicy.IAMPolicyStatement
             {
                 Action = new HashSet<string>(new[] { "execute-api:Invoke" }),
-                Effect = allowedUserAgent.Equals(userAgent) ? "Allow" : "Deny",
+                Effect = effect,
                 Resource = new HashSet<string>(new[] { input.MethodArn })
             });
 
