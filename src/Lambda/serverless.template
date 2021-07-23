@@ -6,7 +6,7 @@
     "Get": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "SimpleLambda::SimpleLambda.Functions::Get",
+        "Handler": "ApiEventHandler::ApiEventHandler.Functions::Handle",
         "Runtime": "dotnetcore3.1",
         "CodeUri": "",
         "MemorySize": 256,
@@ -19,8 +19,8 @@
           "RootGet": {
             "Type": "Api",
             "Properties": {
-              "Path": "/",
-              "Method": "GET"
+              "Path": "/api/notifications",
+              "Method": "POST"
             }
           }
         }
