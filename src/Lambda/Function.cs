@@ -29,7 +29,6 @@ namespace ApiEventHandler
         public APIGatewayProxyResponse Handle(System.Text.Json.JsonElement request, ILambdaContext context)
         {
             context.Logger.LogLine("ApiEventHandler lambda");
-            //context.Logger.LogLine(System.Text.Json.JsonSerializer.Serialize(request));
 
             using var client = new AmazonDynamoDBClient();
             var table = Table.LoadTable(client, "EmailRequests");
