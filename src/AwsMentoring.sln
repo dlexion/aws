@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pipeline", "Pipeline\Pipeline.csproj", "{BC6B0AF9-F839-4C76-8555-A6968976A29A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleLambda", "Lambda\SimpleLambda.csproj", "{C57FC679-466F-42F1-8AA8-904195CAF967}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiEventHandler", "Lambda\ApiEventHandler.csproj", "{C57FC679-466F-42F1-8AA8-904195CAF967}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizerHandler", "AuthorizerHandler\AuthorizerHandler.csproj", "{FBF2741E-E906-42CD-9345-49200559B13D}"
 EndProject
