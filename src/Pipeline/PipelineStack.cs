@@ -54,7 +54,7 @@ namespace Pipeline
 
             var lambdaBuild = new PipelineProject(this, "LambdaBuild", new PipelineProjectProps
             {
-                BuildSpec = BuildSpec.FromObject(new Dictionary<string, object>
+                BuildSpec = BuildSpec.FromObjectToYaml(new Dictionary<string, object>
                 {
                     ["version"] = "0.2",
                     ["phases"] = new Dictionary<string, object>
