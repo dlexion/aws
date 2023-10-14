@@ -83,7 +83,7 @@ namespace Pipeline
                 }),
                 Environment = new BuildEnvironment
                 {
-                    BuildImage = LinuxBuildImage.STANDARD_4_0
+                    BuildImage = LinuxBuildImage.STANDARD_5_0
                 }
             });
 
