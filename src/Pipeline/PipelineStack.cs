@@ -61,7 +61,7 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
-                            ["runtime-versions"] = new Dictionary<string, object>
+                            ["runtime-versions"] = new Dictionary<string, string>
                             {
                                 ["dotnet"] = "6.0"
                             },
