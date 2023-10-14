@@ -61,6 +61,10 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
+                            ["runtime-versions"] = new Dictionary<string, object>
+                            {
+                                ["dotnet"] = "6.0"
+                            },
                             ["commands"] = new string[]
                             {
                                 "cd src/Lambda",
@@ -99,7 +103,7 @@ namespace Pipeline
                     new Amazon.CDK.AWS.CodePipeline.StageProps
                     {
                         StageName = "Source",
-                        Actions = new []
+                        Actions = new[]
                         {
                             new CodeCommitSourceAction(new CodeCommitSourceActionProps
                             {
@@ -113,36 +117,37 @@ namespace Pipeline
                     new Amazon.CDK.AWS.CodePipeline.StageProps
                     {
                         StageName = "Build",
-                        Actions = new []
+                        Actions = new[]
                         {
                             new CodeBuildAction(new CodeBuildActionProps
                             {
                                 ActionName = "Lambda_Build",
                                 Project = lambdaBuild,
                                 Input = sourceOutput,
-                                Outputs = new [] { lambdaBuildOutput },
+                                Outputs = new[] { lambdaBuildOutput },
                             }),
                             new CodeBuildAction(new CodeBuildActionProps
                             {
                                 ActionName = "CDK_Build",
                                 Project = cdkBuild,
                                 Input = sourceOutput,
-                                Outputs = new [] { cdkBuildOutput }
+                                Outputs = new[] { cdkBuildOutput }
                             })
                         }
                     },
                     new Amazon.CDK.AWS.CodePipeline.StageProps
                     {
                         StageName = "Deploy",
-                        Actions = new []
+                        Actions = new[]
                         {
-                            new CloudFormationCreateUpdateStackAction(new CloudFormationCreateUpdateStackActionProps {
+                            new CloudFormationCreateUpdateStackAction(new CloudFormationCreateUpdateStackActionProps
+                            {
                                 ActionName = "Lambda_CFN_Deploy",
                                 TemplatePath = cdkBuildOutput.AtPath("LambdaStack.template.json"),
                                 StackName = "LambdaDeploymentStack",
                                 AdminPermissions = true,
                                 ParameterOverrides = props.LambdaCode.Assign(lambdaBuildOutput.S3Location),
-                                ExtraInputs = new [] { lambdaBuildOutput }
+                                ExtraInputs = new[] { lambdaBuildOutput }
                             })
                         }
                     }
