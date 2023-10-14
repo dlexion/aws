@@ -9,7 +9,7 @@
     "profile"     : "admin",
     "region"      : "eu-central-1",
     "configuration" : "Release",
-    "framework"     : "netcoreapp3.1",
+    "framework"     : "net6.0",
     "s3-prefix"     : "ApiEventHandler/",
     "template-parameters" : "",
     "function-name"       : "ApiEventHandler",
@@ -19,7 +19,7 @@
     "function-memory-size" : 256,
     "function-role"        : "arn:aws:iam::700005105568:role/lambda_exec_ApiEventHandler",
     "function-timeout"     : 30,
-    "function-runtime"     : "dotnetcore3.1",
+    "function-runtime"     : "dotnet6.0",
     "tracing-mode"         : "PassThrough",
     "environment-variables" : "",
     "image-tag"             : ""
