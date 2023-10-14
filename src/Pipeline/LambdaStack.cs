@@ -19,7 +19,7 @@ namespace Pipeline
             {
                 Code = LambdaCode,
                 Handler = "SimpleLambda::SimpleLambda.Functions::Get",
-                Runtime = Runtime.DOTNET_CORE_3_1,
+                Runtime = Runtime.DOTNET_6,
                 Description = "Function generated at " + DateTime.Now.ToString("s")
             });
 

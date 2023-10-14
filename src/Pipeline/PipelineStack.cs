@@ -74,7 +74,7 @@ namespace Pipeline
                     },
                     ["artifacts"] = new Dictionary<string, object>
                     {
-                        ["base-directory"] = "src/Lambda/bin/Release/netcoreapp3.1",
+                        ["base-directory"] = "src/Lambda/bin/Release/net6.0",
                         ["files"] = new string[]
                         {
                             "*",

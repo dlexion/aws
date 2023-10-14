@@ -6,8 +6,8 @@
         "dotnet lambda help",
         "All the command line options for the Lambda command can be specified in this file."
     ],
-    "profile"     : "personal",
-    "region"      : "us-east-1",
+    "profile"     : "admin",
+    "region"      : "eu-central-1",
     "configuration" : "Release",
     "framework"     : "netcoreapp3.1",
     "s3-prefix"     : "ApiEventHandler/",
