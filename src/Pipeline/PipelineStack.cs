@@ -5,6 +5,7 @@ using Amazon.CDK.AWS.CodePipeline;
 using Amazon.CDK.AWS.CodePipeline.Actions;
 using Amazon.CDK.AWS.Lambda;
 using System.Collections.Generic;
+using Constructs;
 
 namespace Pipeline
 {
@@ -48,7 +49,7 @@ namespace Pipeline
                 }),
                 Environment = new BuildEnvironment
                 {
-                    BuildImage = LinuxBuildImage.STANDARD_5_0
+                    BuildImage = LinuxBuildImage.STANDARD_7_0
                 }
             });
 
@@ -87,7 +88,7 @@ namespace Pipeline
                 }),
                 Environment = new BuildEnvironment
                 {
-                    BuildImage = LinuxBuildImage.STANDARD_5_0
+                    BuildImage = LinuxBuildImage.STANDARD_7_0
                 }
             });
 
