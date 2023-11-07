@@ -19,7 +19,7 @@ namespace Pipeline
             var func = new Function(this, "Lambda", new FunctionProps
             {
                 Code = LambdaCode,
-                Handler = "SimpleLambda::SimpleLambda.Functions::Get",
+                Handler = "ApiEventHandler::ApiEventHandler.Functions::Handle",
                 Runtime = Runtime.DOTNET_6,
                 Description = "Function generated at " + DateTime.Now.ToString("s")
             });
