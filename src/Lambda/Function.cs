@@ -30,17 +30,17 @@ namespace ApiEventHandler
         {
             context.Logger.LogLine("ApiEventHandler lambda");
 
-            using var client = new AmazonDynamoDBClient();
-            var table = Table.LoadTable(client, "EmailRequests");
+            // using var client = new AmazonDynamoDBClient();
+            // var table = Table.LoadTable(client, "EmailRequests");
 
             context.Logger.LogLine($"body: {request}");
-            var emailRequest = Document.FromJson(request.ToString());
-
-            emailRequest["Id"] = Guid.NewGuid().ToString();
-            emailRequest["Status"] = "Pending";
-
-            table.PutItemAsync(emailRequest).Wait();
-            context.Logger.LogLine("Successfully put request to DynamoDB");
+            // var emailRequest = Document.FromJson(request.ToString());
+            //
+            // emailRequest["Id"] = Guid.NewGuid().ToString();
+            // emailRequest["Status"] = "Pending";
+            //
+            // table.PutItemAsync(emailRequest).Wait();
+            // context.Logger.LogLine("Successfully put request to DynamoDB");
 
             var response = new APIGatewayProxyResponse
             {
