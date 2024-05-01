@@ -62,10 +62,6 @@ namespace Pipeline
                     {
                         ["install"] = new Dictionary<string, object>
                         {
-                            // ["runtime-versions"] = new Dictionary<string, string>
-                            // {
-                            //     ["dotnet"] = "6.0"
-                            // },
                             ["commands"] = new string[]
                             {
                                 "cd src/Lambda",

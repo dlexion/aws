@@ -34,7 +34,7 @@ namespace Pipeline
             new LambdaDeploymentGroup(this, "DeploymentGroup", new LambdaDeploymentGroupProps
             {
                 Alias = alias,
-                DeploymentConfig = LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE
+                DeploymentConfig = LambdaDeploymentConfig.ALL_AT_ONCE
             });
         }
     }
